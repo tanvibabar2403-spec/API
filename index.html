@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quote Generator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="app">
+        <header class="header">
+            <h1>Pick a Vibe — Get a Quote</h1>
+            <p class="subtitle">Choose one of four styles and get a fresh quote — a little wild, a little wise.</p>
+        </header>
+
+        <section class="controls">
+            <div class="btn-row">
+                <button class="cat-btn active" data-cat="inspirational">Inspirational</button>
+                <button class="cat-btn" data-cat="motivational">Motivational</button>
+                <button class="cat-btn" data-cat="funny">Funny</button>
+                <button class="cat-btn" data-cat="life">Life</button>
+            </div>
+            <div class="actions">
+                <button id="newQuote" class="action-btn">New Quote</button>
+                <button id="copyBtn" class="action-btn">Copy</button>
+            </div>
+        </section>
+
+        <section class="card" id="quoteCard">
+            <div class="quote-mark">“</div>
+            <blockquote id="quoteText">Click a button and press "New Quote" to begin.</blockquote>
+            <cite id="quoteAuthor">—</cite>
+        </section>
+
+        <footer class="footer">Made with a dash of craziness ✨</footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+:root{
+    --bg1: #0f1724;
+    --card: linear-gradient(135deg,#111827 0%, #1f2a44 100%);
+    --accent1: #ff6b6b;
+    --accent2: #7c5cff;
+    --glass: rgba(255,255,255,0.06);
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,'Helvetica Neue',Arial}
+body{
+    background: radial-gradient(1200px 600px at 10% 10%, rgba(124,92,255,0.12), transparent),
+                radial-gradient(1000px 500px at 90% 90%, rgba(255,107,107,0.08), transparent),
+                var(--bg1);
+    color:#e6eef8;
+    display:flex;align-items:center;justify-content:center;padding:48px;
+}
+.app{width:100%;max-width:880px}
+.header{margin-bottom:18px;text-align:center}
+.header h1{font-family:Poppins,Inter;font-weight:600;margin:0 0 6px;color:var(--accent2);letter-spacing:0.4px}
+.subtitle{margin:0;color:#a8b3c7}
+
+.controls{display:flex;align-items:center;justify-content:space-between;margin:22px 0}
+.btn-row{display:flex;gap:10px}
+.cat-btn{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:10px 14px;border-radius:10px;color:#dbe8ff;cursor:pointer;transition:transform .18s,box-shadow .18s,background .18s}
+.cat-btn:hover{transform:translateY(-3px);box-shadow:0 10px 30px rgba(0,0,0,0.45)}
+.cat-btn.active{background:linear-gradient(90deg,var(--accent2),var(--accent1));color:#07102a;font-weight:700;border:none}
+
+.actions{display:flex;gap:10px}
+.action-btn{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:10px 14px;border-radius:999px;color:#dbe8ff;cursor:pointer;backdrop-filter:blur(6px)}
+.action-btn:hover{transform:translateY(-3px);background:rgba(255,255,255,0.03)}
+
+.card{position:relative;padding:40px;border-radius:18px;background:var(--card);box-shadow:0 8px 40px rgba(2,6,23,0.6);min-height:160px;display:flex;flex-direction:column;justify-content:center;overflow:hidden}
+.quote-mark{position:absolute;left:18px;top:6px;font-size:120px;line-height:0.7;color:rgba(255,255,255,0.03);transform:rotate(-6deg)}
+blockquote{margin:0;font-size:20px;font-weight:500;color:#f0f7ff;z-index:2}
+cite{margin-top:12px;display:block;color:#c9d6ef;z-index:2}
+
+.footer{text-align:center;margin-top:18px;color:#9fb0d2}
+
+/* little crazy animations */
+@keyframes wobble{0%{transform:rotate(-1deg)}50%{transform:rotate(1deg)}100%{transform:rotate(-1deg)}}
+.cat-btn:nth-child(3):hover{animation:wobble .6s ease-in-out}
+
+@media (max-width:600px){
+    .controls{flex-direction:column;align-items:stretch;gap:12px}
+    .actions{justify-content:flex-end}
+    .quote-mark{font-size:80px}
+}
